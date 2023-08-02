@@ -1,0 +1,8 @@
+dist-newstyle/
+assets/pieces/1x/
+assets/pieces/2x/
+assets/pieces/128h/*.png
+assets/pieces/128h/square*.bmp
+assets/pieces/256h/
+assets/pieces/512h/
+assets/pieces/1024h/
