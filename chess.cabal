@@ -54,6 +54,10 @@ extra-doc-files:    CHANGELOG.md
 common warnings
     ghc-options: -Wall
 
+source-repository head
+  type: git
+  location: https://github.com/suppergerrie2/FPGame
+
 executable chess
     -- Import common warning flags.
     import:           warnings
@@ -66,6 +70,8 @@ executable chess
         PictureUtils
         Drawing
         GameState
+        GamePlay
+        Menu
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:

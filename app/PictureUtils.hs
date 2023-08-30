@@ -19,13 +19,12 @@ drawPictureWithSize (w, h) p = scale (w / fst s) (h / snd s) (drawPicture p)
     s = pictureSize p
 
 drawPictureWithMaxSize :: Float -> Picture -> Picture
-drawPictureWithMaxSize s p = translate ((s - scaledWidth)/2) ((s-scaledHeight)/2) $ drawPictureWithSize (scaledWidth, scaledHeight) p
-    where
-        (width, height) = pictureSize p
-        scaleFactor = s / max width height
-        scaledWidth = width * scaleFactor
-        scaledHeight = height * scaleFactor
-
+drawPictureWithMaxSize s p = translate ((s - scaledWidth) / 2) ((s - scaledHeight) / 2) $ drawPictureWithSize (scaledWidth, scaledHeight) p
+  where
+    (width, height) = pictureSize p
+    scaleFactor = s / max width height
+    scaledWidth = width * scaleFactor
+    scaledHeight = height * scaleFactor
 
 getBmpDataFromPicture :: Picture -> Maybe BitmapData
 getBmpDataFromPicture (Translate _ _ p) = getBmpDataFromPicture p -- Modifications to the image like color and translation have the picture layered in it like an onion.
